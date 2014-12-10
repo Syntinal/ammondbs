@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 14, 2014, 3:42:48 AM
+    Author     : Nathan
+*/
+@import url('/css/normalize.css');
+
+
+nav ul li{
+    float: left;
+    width: 25%;
+}
+
+
+main{
+    clear: both;
+}
+
+main h2{
+    float:left;
+    width: 23%;
+}
+
+main p{
+    float: left;
+    width: 20%;
+    margin: 15px;
+}
+
+main p:nth-child(6){
+    background-color: blue;
+}
+
+main p:nth-child(7){
+    max-height: 400px;
+    background-color: red;
+
+}
+
+main p:nth-child(8){
+    min-height: 400px;
+    background-color: green;
+
+}
+
+main p:nth-child(9){
+    max-height: 450px;
+    min-height: 350px;
+    background-color: yellow;
+}
+
+#example img{
+    clear: both;
+}
+
+#example img{
+    float: left;
+    width: 50%;
+    height: 50%;
+    min-height: 480px;
+    max-height: 720px;
+
+}

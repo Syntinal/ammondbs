@@ -1,0 +1,350 @@
+/*
+================CSS screen file=============
+*/
+
+/* ========================================
+    Created on : Feb 24, 2014, 11:03:02 AM
+    Author     : Nathan
+============================================ */
+
+/*calls the normalize.css to create uniformity in style sheets*/
+@import url('/css/normalize.css');
+
+/*calls the gridism.css to allow for adaption to different screen sizes*/
+@import url('/css/gridism.css');
+
+/*calls the js-image-slider to control and style the rotating images on index page*/
+@import url('/css/ninja-slider.css');
+
+/*Imports text families from google to be applied on the site*/
+@import url('//fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+@import url('//fonts.googleapis.com/css?family=Alegreya+Sans');
+
+/*Imports custom font icons created using icomoon.io*/
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?hepcjz');
+	src:url('fonts/icomoon.eot?#iefixhepcjz') format('embedded-opentype'),
+		url('/fonts/icomoon.woff?hepcjz') format('woff'),
+		url('/fonts/icomoon.ttf?hepcjz') format('truetype'),
+		url('/fonts/icomoon.svg?hepcjz#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* sets up border box */
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
+
+/* ============ GENERAL STYLING =====================*/
+
+body{
+    font-family:"Alegreya Sans SC", "Alegreya Sans", "san serif";
+    color: #6C655A;
+    font-size: 14px;
+    max-width: 960px;
+    margin: auto;
+}
+
+
+body.background {
+    background-image: url('/photo/PCinterface.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+header{
+    margin-top: 0px;
+    background-color: #101010;
+    background-image: linear-gradient(#101010, #202020);
+    border-style: solid;
+    border-width: 2px;
+    border-color: #101010;
+}
+
+header img{
+    border-style: solid;
+    border-width: 1px;
+}
+
+footer img{
+    border-style: solid;
+    border-width: 1px;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+header nav ul li{
+    width: 16.6%;  
+    float: left;
+    list-style-type: none; 
+}
+
+footer{
+    background-color: #101010;
+    background-image: linear-gradient(#202020, #111111);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 16px;
+    min-height: 150px;
+}
+
+footer nav{
+    margin-top: 50px;
+}
+
+footer ul{
+    min-width: 150px;
+    margin-top: 6px;
+    list-style-type: circle;
+}
+
+footer ul lh{
+    text-align: center;
+    font-weight: bold;
+    color: #908470;
+    font-size: 22px;
+}
+
+footer h1{
+    text-align: center;
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    color: #C7BBA6;
+}
+
+footer nav ul li{
+    width: 30%;  
+    float: left;
+    list-style-type: none; 
+}
+
+.content main{
+    background-color: #101010;
+    background-image: linear-gradient(#202020, #111111);
+    border-radius: 20px;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #101010;
+    opacity: .95;
+}
+.content h1{
+    text-align: center;
+    color: #C7BBA6;
+}
+
+.content main h2{
+    color: #908470;
+    font-size: 22px;
+}
+
+
+
+main nav ul li{
+    width: 20%;  
+    float: left;
+    list-style-type: none;
+    margin-bottom: 50px;
+}
+
+main p{
+    margin: 35px;
+}
+
+video{
+  width: 100%;
+  
+}
+
+img{
+    margin: 30px;
+    max-width: 400px;
+}
+
+/* ================= FONT ICON STYLE ==============*/
+
+span{
+    font-family: 'icomoon';
+    color: #6C655A;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    margin-left: 5px;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+}
+
+span:hover{
+    color: #C7BBA6;   
+}
+
+/* ============= RESPONSIVE SCREEN SIZE ADAPTATION ==============*/
+
+@media screen and (max-width: 568px){
+    
+    header{
+        margin-bottom: 5px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; /* future proofing */
+    }
+    
+    #ninja-slider{
+          border-radius:10px;
+    }
+    
+    span{
+        font-size:25px;
+            
+    }
+    
+    header nav{
+        margin-bottom: 0px;
+    }
+
+    header img{
+        display: none;
+    }
+    
+    footer img{
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-left: 42px;
+        width:250px;        
+    }
+
+    footer{
+        margin-top: 5px;
+    }
+}
+
+@media screen and (min-width: 568px){
+    
+    header{
+        margin-bottom: 40px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px; /* future proofing */
+    }
+    
+    #ninja-slider{
+          border-radius:20px;
+    }
+
+    span{
+        font-size:30px
+    }
+    
+    header img{
+    min-width: 200px;
+    max-width: 250px;
+    margin:15px;
+    border-radius: 6px;
+    }
+
+    footer img{
+        display: none;
+    }    
+   
+    header nav{
+        margin-bottom: 15px;
+    }
+    
+    footer{
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (min-width: 750px){
+    span{
+    font-family: 'icomoon';
+    font-size: 30px;
+    color: #6C655A;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+    }
+    
+    .caption{
+        font-family: "Alegreya Sans SC", "Alegreya Sans", "san serif";;
+        font-size: 15px;
+        color: #6C655A;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; 
+    }
+    
+    #caption-home:after{
+        content: "HOME";
+    }
+    #caption-about:after{
+        content: "ABOUT";
+    }
+    #caption-vision:after{
+        content: "VISION";
+    }
+    #caption-database:after{
+        content: "DATABASE";
+    }
+    #caption-technology:after{
+        content: "TECHNOLOGY";
+    }
+    #caption-contact:after{
+        content: "CONTACT";
+    }
+    #caption-sitePlan:after{
+        content: "SITE PLAN";
+    }
+    #caption-presentation:after{
+        content: "PRESENTATION";
+    }
+    #caption-interface:after{
+        content: "INTERFACE";
+    }
+    #caption-search:after{
+        content: "SEARCH";
+    }
+    #caption-forms:after{
+        content: "FORMS";
+    }
+    #caption-reports:after{
+        content: "REPORTS";
+    }
+    #caption-production:after{
+        content: "PRODUCTION";
+    }
+    #caption-scanner:after{
+        content: "SCANNER";
+    }
+    #caption-tablet:after{
+        content: "TABLET";
+    }
+    #caption-rfid:after{
+        content: "RFID";
+    }
+}
+
