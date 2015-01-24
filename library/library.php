@@ -8,7 +8,7 @@ function connFulfillmentUser(){
     $server = 'localhost';
     $username = 'ammondbs_prxUser';
     $password = '982601Nw';
-    $database = 'fulfillment';
+    $database = 'ammondbs_fulfillment';
     $dsn = "mysql:host=$server; dbname=$database";
     $option = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
@@ -33,7 +33,58 @@ function connFulfillmentAdmin(){
     $server = 'localhost';
     $username = 'ammondbs_prxAdmn';
     $password = '982601Nw';
-    $database = 'fulfillment';
+    $database = 'ammondbs_fulfillment';
+    $dsn = "mysql:host=$server; dbname=$database";
+    $option = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+
+    try {
+        $congtr1 = new PDO($dsn, $username, $password);
+        //echo 'It worked';
+        }catch (PDOException $exc){
+            //echo $exc->getTraceAsString();
+            $message = '<p>Sorry bad things happened</p>';
+            $_SESSION['message'] = $message;
+            header('location: /errorDocs/500.php');
+    }
+    
+    if(is_object($congtr1)){
+        return $congtr1;
+    }
+    return false;
+    
+    
+}
+
+function connGuitar2User(){
+    $server = 'localhost';
+    $username = 'ammondbs_prxUser';
+    $password = '982601Nw';
+    $database = 'ammondbs_guitar2';
+    $dsn = "mysql:host=$server; dbname=$database";
+    $option = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+
+    try {
+        $congtr1 = new PDO($dsn, $username, $password);
+        //echo 'It worked';
+        }catch (PDOException $exc){
+            //echo $exc->getTraceAsString();
+            $message = '<p>Sorry bad things happened</p>';
+            $_SESSION['message'] = $message;
+            header('location: /errorDocs/500.php');
+    }
+    
+    if(is_object($congtr1)){
+        return $congtr1;
+    }
+    return false;
+}
+
+//Connect to Guitar1 Database using the admin proxy
+function connGuitar2Admin(){
+    $server = 'localhost';
+    $username = 'ammondbs_prxAdmn';
+    $password = '982601Nw';
+    $database = 'ammondbs_guitar2';
     $dsn = "mysql:host=$server; dbname=$database";
     $option = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 

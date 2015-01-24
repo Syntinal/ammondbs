@@ -113,11 +113,13 @@
                     <dt>Scenario 3: Customer needs to determine described color of paticular SKU.</dt>
                     	<dd>Login</dd>
                     	<dd>Select desired SKU</dd>
-                    	<dd>View SKU display and find field that lists quantity</dd>
-                    <dt>Scenario 4: Customer needs to determine associated customer of a SKU.</dt>
+                    	<dd>User then can view image of SKU</dd>
+                    <dt>Scenario 4: Admin needs to edit SKUs description.</dt>
                     	<dd>Login</dd>
                     	<dd>Select desired SKU</dd>
-                    	<dd>View SKU display and find field that lists quantity</dd>
+                        <dd>Select edit SKU</dd>
+                    	<dd>Modify SKUs description</dd>
+                        <dd>Select Update</dd>
                     <dt>Scenario 5: Customer needs to determine quantity pending receipt</dt>
                     	<dd>Login</dd>
                     	<dd>Select desired SKU</dd>
@@ -145,7 +147,6 @@
                     <dd>Inventory Unit</dd>
                     <dd>Inventory SKU</dd>
                     <dd>Inventory Details</dd>
-		    <dd>Associated Company Name</dd>
                     <dt>Interactive</dt>
                     <dd>LoginName</dd>
                     <dd>Login Password</dd>
@@ -153,11 +154,13 @@
                     <dd>SKU Selection</dd>		    
                     <dt>Photos:</dt>
                     <dd>Photo of Inventory Items</dd>
-                    <dd>Thumbnail of Inventory Item</dd>
-                    <dd>Company Logo</dd>
                     <dt>New Icons:</dt>
-                    <dd>magnifing glass - search,</dd>
-                    <dd>house – home</dd>
+                    <dd>magnifying glass - search</dd>
+                    <dd>door arrow in - login</dd>
+                    <dd>door arrow out - logout</dd>
+                    <dd>stack - content</dd>
+                    <dd>two heads - users</dd>
+                    <dd>image/form - register</dd>
                  </dl>  
                  </div>
                  

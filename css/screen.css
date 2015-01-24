@@ -49,8 +49,22 @@ body{
     margin: auto;
 }
 
-main{
+.codeNav a{
+    font-family:"Alegreya Sans SC", "Alegreya Sans", "san serif";
+    color: #C7BBA6;
+    font-size: 24px;
+    text-decoration: underline;
+}
 
+.codeNav li{
+    width: 7%;
+    margin-left: 15%;
+}
+
+
+
+main nav a:hover{
+    color: #FFFFFF;
 }
 
 nav{
@@ -102,15 +116,16 @@ header nav:first-child ul li{
 }
 
 header nav h1{
-    font-size: 12px;
+    font-size: 16px;
 }
+
 footer{
     background-color: #101010;
     background-image: linear-gradient(#202020, #111111);
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     font-size: 16px;
-    min-height: 290px;
+    min-height: 288px;
     margin-top: 25px;
 }
 
@@ -172,12 +187,29 @@ d1{
     opacity: .95;
 }
 .content h1{
-    text-align: center;
-    font-size: 12px;
+    clear:both;
+    font-size: 30px;
+    margin-left: 10%;
+}
+
+.content header h1{
+    font-size: 16px;
 }
 
 .content main h2{
     font-size: 30px;
+}
+
+.content main h1{
+    font-size: 40px;
+    margin-left: 10%;
+}
+.content dl{
+    margin-left: 5%;
+}
+
+.content img{
+    margin-left: 5%;
 }
 
 .content footer{
@@ -194,11 +226,30 @@ d1{
     min-height: 585px;
 }
 
+
+/*  Search Form Override   */ 
+.itemDisplay form input, .itemDisplay form textarea{
+    background: lightgray;
+}
+.itemDisplay img{
+    margin-left: 12%;
+    max-width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+
+.itemDisplayEdit form{
+    margin-bottom: 30px;
+}
+
+
+/* -----------------*/
 main nav ul li{
     width: 20%;  
     float: left;
     list-style-type: none;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 main p{
@@ -215,16 +266,21 @@ img{
     width: 75%; 
     min-width: 100px;
     max-width: 500px;;
+
     }
     
 /* Code Samples */
 pre {
+ clear: both;
  white-space: pre-wrap;
  white-space: -moz-pre-wrap;
  white-space: -o-pre-wrap;
  background: #faf8f0;
- margin-left: 10%;
- margin-right: 10%;
+ margin-left: 5%;
+ margin-right: 5%;
+ color: black;
+ padding: 3%;
+ font-size: 12px; 
 }
 code {
  display: block;
@@ -239,6 +295,12 @@ code {
     font-size: 24px;
 }
 /*================Form Styling================*/
+
+form{
+    margin-left: 10%;
+
+}
+
 ::-moz-placeholder {
     color: grey;
 }
@@ -249,37 +311,30 @@ code {
 
 form input {
     height:30px; 
-    width:300px; 
-    padding:10px 12px;
+    padding-left: 10px;
+    width: 45%;
+    min-width: 250px;
 }
 
 form input, form textarea{
     font: 14px/14px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
     color: BLACK;
-    padding-right:30px;
     border:1px solid #aaa;
     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
     border-radius:2px;
 }
 
 form input:focus, form textarea:focus {
-    
     background: #fff; 
     border:1px solid #C7BBA6; 
-    box-shadow: 0 0 3px #C7BBA6; 
-}
-form input:focus{
-    padding:18px;
-    width:350px;
+    box-shadow: 0 0 3px #C7BBA6;
+    width: 47%;
+    height:40px; 
 }
 
-
-form{
-    margin-left: 10%;
-}
 
 form ul {
-    max-width:750px;
+    max-width:100%;
     min-width:300px;
     list-style-type:none;
     list-style-position:outside;
@@ -288,22 +343,24 @@ form ul {
     list-style-type: none;
 }
 form li{
+    margin-right: 10%;
     padding:12px; 
-    border-bottom:1px solid #eee;
-    position:relative;
+    border-bottom:1px solid #777;
 }
 
-
+form li:first-child, form li:last-child {
+    border-bottom:2px solid #C7BBA6;
+}
 
 /* Button Style */
 form button {
+    clear:both;
     background-color: #65655A;
     background: -webkit-gradient(linear, left top, left bottom, from(#65655A), to(#C7BBA6));
     background: -webkit-linear-gradient(top, #65655A, #C7BBA6);
     background: -moz-linear-gradient(top, #65655A, #C7BBA6);
     background: -ms-linear-gradient(top, #65655A, #C7BBA6);
     background: -o-linear-gradient(top, #65655A, #C7BBA6);
-    background: linear-gradient(top, #65655A, #C7BBA6);
     border: 1px solid #65655A;
     border-bottom: 1px solid #C7BBA6;
     border-radius: 3px;
@@ -321,9 +378,10 @@ form button {
     padding: 6px 5px;
     text-align: center;
     text-shadow: 0 -1px 0 #396715;
+    margin-top: 7px;
 }
 form button:hover {
-    opacity:.85;
+    opacity:.75;
     cursor: pointer; 
 }
 form button:active {
@@ -344,20 +402,19 @@ form label {
     padding:3px;
 }
 
+form button {
+    margin-left: 5%;
+}
 
-form button {margin-left: 50px;}
-
-
-
-
-
+form button:first-child {
+    margin-left: 3%;
+}
 
 
 /*================Table Styling================*/
 table a:link {
 	color: #666;
 	font-weight: bold;
-	//text-decoration:none;
 }
 table a:visited {
 	color: #999999;
@@ -388,6 +445,19 @@ table {
 	-webkit-box-shadow: 0 1px 2px #d1d1d1;
 	box-shadow: 0 1px 2px #d1d1d1;
 }
+/* Search Results Table Override */
+.resultsTable{
+        font-size: 11px;
+        margin-top: 30px;
+        margin-right: 3%;
+        margin-left: 3%;
+        min-width: 94%;
+}
+.resultsTable td{
+        padding: 10px;
+        text-align: left;
+}
+
 table th {
 	padding:21px 25px 22px 25px;
 	border-top:1px solid #fafafa;
@@ -524,6 +594,35 @@ span:hover{
 	padding-right:3px;
     }
     
+    form input, form textarea{
+        font: 12px/12px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+    }
+    
+    /* Search Results Table Override */
+    .resultsTable{
+            font-size: 8px;
+            margin-top: 20px;
+            margin-right: 1%;
+            margin-left: 1%;
+            min-width: 98%;
+    }
+    .resultsTable td{
+            padding: 1px;
+            text-align: left;
+    }
+    
+    form{
+        margin-left: 0%;
+    }
+    
+    .content header h1{
+        font-size: 10px;
+    }
+    
+    .codeNav a{
+        font-size: 12px;
+    }
+
 }
 
 @media screen and (min-width: 568px){
@@ -535,7 +634,7 @@ span:hover{
     }
     
     #ninja-slider{
-          border-radius:20px;
+        border-radius:20px;
     }
 
     span{
@@ -543,12 +642,12 @@ span:hover{
     }
     
     header img{
-    min-width: 200px;
-    max-width: 250px;
-    margin-left:30px;
-    border-radius: 6px;
-    margin-top: -35px;
-    margin-bottom: 35px;
+        min-width: 200px;
+        max-width: 250px;
+        margin-left:30px;
+        border-radius: 6px;
+        margin-top: -35px;
+        margin-bottom: 35px;
     }
 
     footer img{
@@ -659,6 +758,16 @@ span:hover{
     #caption-logout:after{
         content: "LOGOUT";
     }
+    #caption-account:after{
+        content: "ACCOUNT";
+    }
+    #caption-addInventory:after{
+        content: "ADD INVENTORY";
+    }
+    #caption-viewCode:after{
+        content: "VIEW CODE";
+    }
+
 
     table{
         font-size: 20px;
@@ -666,6 +775,19 @@ span:hover{
     
     table td {
 	padding:18px;
+    }
+    
+    /* Search Results Table Override */
+    .resultsTable{
+            font-size: 14px;
+            margin-top: 30px;
+            margin-right: 5%;
+            margin-left: 5%;
+            min-width: 90%;
+    }
+    .resultsTable td{
+            padding: 10px;
+            text-align: left;
     }
 }
 

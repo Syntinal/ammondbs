@@ -15,9 +15,6 @@
         </main>
         
         <footer>
-            <?php
-                echo date('l jS \of F Y h:i:s A')
-            ?>
         </footer>    
     </body>
 </html>
